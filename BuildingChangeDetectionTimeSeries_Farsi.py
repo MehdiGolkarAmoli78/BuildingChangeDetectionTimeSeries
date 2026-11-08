@@ -266,7 +266,7 @@ def load_model(model_path):
         device = torch.device('cpu')
         model = smp.UnetPlusPlus(
             encoder_name='timm-efficientnet-b8',
-            encoder_weights='imagenet',
+            encoder_weights=None,
             in_channels=12,
             classes=1,
             decoder_attention_type='scse'
